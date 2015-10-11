@@ -31,11 +31,11 @@ dependencies {
 ### `BindingAppCompatActivity` and `BindingFragment`
 
 ```java
-public class MainActivity extends BindingAppCompatActivity {
+public class MainActivity extends BindingAppCompatActivity<MainActivityBinding> {
 
     @Override
     protected int provideContentView(@Nullable Bundle savedInstanceState) {
-        return R.layout.activity_main;
+        return R.layout.main_activity;
     }
 
     @Override
@@ -50,11 +50,11 @@ public class MainActivity extends BindingAppCompatActivity {
 ```
 
 ```java
-public class MainFragment extends BindingFragment {
+public class MainFragment extends BindingFragment<ProfileFragmentBinding> {
 
     @Override
     public int provideContentView(@Nullable Bundle savedInstanceState) {
-        return R.layout.activity_main;
+        return R.layout.profile_fragment;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class PhotoAdapter extends BindingRecyclerView.ListAdapter<Photo, PhotoAd
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater, R.layout.photo_item, parent);
+        return new ViewHolder(inflater, parent);
     }
 
     @Override
@@ -87,8 +87,8 @@ public class PhotoAdapter extends BindingRecyclerView.ListAdapter<Photo, PhotoAd
 
     public class ViewHolder extends BindingRecyclerView.ViewHolder<PhotoItemBinding> {
 
-        public ViewHolder(LayoutInflater inflater, @LayoutRes int layoutId, ViewGroup parent) {
-            super(inflater, layoutId, parent);
+        public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater, R.layout.photo_item, parent);
         }
 
     }
