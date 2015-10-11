@@ -1,7 +1,7 @@
 Data Binding Support Library
 ==========
 
-[![](https://img.shields.io/github/release/oxoooo/data-binding-support.svg?style=flat-square)](https://jitpack.io/#oxoooo/data-binding-support)
+[![](https://img.shields.io/github/tag/oxoooo/data-binding-support.svg?style=flat-square)](https://jitpack.io/#oxoooo/data-binding-support)
 [![](https://img.shields.io/github/license/oxoooo/data-binding-support.svg?style=flat-square)](LICENSE)
 [![](https://img.shields.io/github/watchers/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/watchers)
 [![](https://img.shields.io/github/stars/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/stargazers)
