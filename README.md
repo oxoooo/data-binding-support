@@ -1,11 +1,8 @@
 Data Binding Support Library
 ==========
 
-[![](https://img.shields.io/github/tag/oxoooo/data-binding-support.svg?style=flat-square)](https://jitpack.io/#oxoooo/data-binding-support)
+[![](https://img.shields.io/github/tag/oxoooo/data-binding-support.svg?style=flat-square&label=jitpack.io)](https://jitpack.io/#oxoooo/data-binding-support)
 [![](https://img.shields.io/github/license/oxoooo/data-binding-support.svg?style=flat-square)](LICENSE)
-[![](https://img.shields.io/github/watchers/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/watchers)
-[![](https://img.shields.io/github/stars/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/stargazers)
-[![](https://img.shields.io/github/forks/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/network)
 [![](https://img.shields.io/github/issues/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/issues)
 
 Provides useful subclasses from [Support Library](https://developer.android.com/tools/support-library/index.html)
@@ -22,7 +19,7 @@ repositories {
 dependencies {
     // ... support library ...
     // ...
-    compile 'com.github.oxoooo:data-binding-support:1.0.0'
+    compile 'com.github.oxoooo:data-binding-support:1.1.0'
 }
 ```
 
@@ -97,12 +94,30 @@ public class PhotoAdapter extends BindingRecyclerView.ListAdapter<Photo, PhotoAd
 ```
 
 ```java
-ObservableList photos = new ObservableArrayList();
-recyclerView.setAdapter(new PhotoAdapter(this, photos));
+private final ObservableList photos = new ObservableArrayList();
 
-// Just add your items in the ObservableList, BindingRecyclerView.ListAdapter will take care of the
-// binding for you.
-photos.addAll(/* ... */);
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    /* ... */
+
+    recyclerView.setAdapter(new PhotoAdapter(this, photos));
+
+    // Just add your items in the ObservableList, BindingRecyclerView.ListAdapter will take care of the
+    // binding for you.
+    photos.addAll(/* ... */);
+}
+
+@Override
+protected void onDestroy() {
+    super.onDestroy();
+
+    /* ... */
+
+    // Remember to release the adapter, because it has a reference to the `photos` ObservableList.
+    recyclerView.setAdapter(null);
+}
 ```
 
 ## License
