@@ -17,9 +17,9 @@ repositories {
 }
 
 dependencies {
-    compile 'provided 'com.android.support:appcompat-v7:23.2.1'
-    compile 'provided 'com.android.support:recyclerview-v7:23.2.1'
-    compile 'ooo.oxo:data-binding-support:1.1.0'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'ooo.oxo:data-binding-support:1.1.1'
 }
 ```
 
