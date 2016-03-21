@@ -28,7 +28,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.databinding:dataBinder:1.0-rc3'
+        classpath 'com.android.tools.build:gradle:2.1.0-alpha3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
     }
 }
 

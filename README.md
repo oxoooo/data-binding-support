@@ -12,14 +12,14 @@ that work with [Data Binding](https://developer.android.com/tools/data-binding/g
 
 ```gradle
 repositories {
-    // ...
+    jcenter()
     maven { url "https://jitpack.io" }
 }
 
 dependencies {
-    // ... support library ...
-    // ...
-    compile 'com.github.oxoooo:data-binding-support:1.1.0'
+    compile 'provided 'com.android.support:appcompat-v7:23.2.1'
+    compile 'provided 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'ooo.oxo:data-binding-support:1.1.0'
 }
 ```
 
