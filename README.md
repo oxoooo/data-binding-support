@@ -1,7 +1,8 @@
 Data Binding Support Library
 ==========
 
-[![](https://img.shields.io/github/tag/oxoooo/data-binding-support.svg?style=flat-square&label=jitpack.io)](https://jitpack.io/#oxoooo/data-binding-support)
+[![](https://img.shields.io/github/tag/oxoooo/data-binding-support.svg?style=flat-square&label=jitpack.io)](https://jitpack.io/#ooo.oxo/data-binding-support)
+[![](https://img.shields.io/github/tag/oxoooo/data-binding-support.svg?style=flat-square&label=javadoc)](https://jitpack.io/ooo/oxo/data-binding-support/1.1.1/javadoc/)
 [![](https://img.shields.io/github/license/oxoooo/data-binding-support.svg?style=flat-square)](LICENSE)
 [![](https://img.shields.io/github/issues/oxoooo/data-binding-support.svg?style=flat-square)](https://github.com/oxoooo/data-binding-support/issues)
 
@@ -17,9 +18,10 @@ repositories {
 }
 
 dependencies {
+    compile 'ooo.oxo:data-binding-support:1.1.1'
+
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:recyclerview-v7:23.2.1'
-    compile 'ooo.oxo:data-binding-support:1.1.1'
 }
 ```
 
