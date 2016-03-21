@@ -39,10 +39,6 @@ android {
         versionCode 10101
         versionName "1.1.1"
     }
-
-    dataBinding {
-        enabled = true
-    }
 }
 
 dependencies {
@@ -51,6 +47,8 @@ dependencies {
 
     //noinspection GradleDynamicVersion
     provided 'com.android.support:recyclerview-v7:+'
+
+    provided "com.android.databinding:adapters:1.1"
 }
 
 task sourcesJar(type: Jar) {
